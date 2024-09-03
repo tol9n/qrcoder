@@ -1,11 +1,12 @@
 from flask import Flask, request, send_file
 import qrcode
+
 app = Flask(__name__)
 
 
 @app.route("/service/qr")
 def qrcoder():
-    address = request.headers.get('payload')
+    address = request.args.get('payload')
     qr = qrcode.make(address)
     qr.save('code.png')
     return send_file('code.png', mimetype='image/gif')
