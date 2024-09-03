@@ -13,4 +13,4 @@ def qrcoder():
 
 
 if __name__ == '__main__':
-    app.run(host='172.30.105.99', port=5001)
+    app.run(host='0.0.0.0', port=5001)
