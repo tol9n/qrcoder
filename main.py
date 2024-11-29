@@ -9,7 +9,7 @@ def qrcoder():
     address = request.args.get('payload')
     qr = qrcode.make(address)
     qr.save('code.png')
-    return send_file('code.png', mimetype='image/gif')
+    return send_file('code.png', mimetype='image/png')
 
 
 if __name__ == '__main__':
